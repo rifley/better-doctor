@@ -1,8 +1,15 @@
 var apiKey = require('./../.env').apiKey;
 console.log(apiKey);
 
-function Doctor() {
+function Patient(firstName, lastName, insurance, illness) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.insurance = insurance;
+  this.illness = illness;
+}
 
+function Doctor(patient) {
+  this.patient = patient;
 }
 
 
@@ -19,3 +26,4 @@ Doctor.prototype.getDoctors = function(medicalIssue) {
 };
 
 exports.Doctor = Doctor;
+exports.Patient = Patient;
