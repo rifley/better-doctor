@@ -1,12 +1,23 @@
 .jumbotron {
-  color: blue;
+  color: black;
   text-align: center;
+  background-image: url("http://vignette3.wikia.nocookie.net/bigbangtheory/images/2/20/All_.png/revision/latest?cb=20150703233059");
+  h1 {
+    background-color: white;
+    display: inline-block;
+  }
 }
 
 .doctor {
   margin-left: 40px;
-  border: 2px dotted blue;
+  margin-top: 40px;
+  padding: 4px;
+  border: 2px solid skyblue;
   display: inline-block;
+  width: 500px;
+  p {
+    float: right;
+  }
 }
 
 .output {

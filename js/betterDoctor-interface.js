@@ -7,7 +7,7 @@ function print(firstName, lastName, picture, bio) {
   $("#output").append(
     "<div class='doctor'>" +
     "<img src='"+picture+"' alt='test' class='img-circle'><br>" +
-    "<p>" + lastName + ', ' + firstName + "</p><br>" +"<p>"+ bio+"</p>"+"<p>"+"</p><br>" + "</div>");
+    "<h6>" + lastName + ', ' + firstName +"</h6><br>" +"<p>"+ bio+"</p>" + "</div>");
 }
 
 

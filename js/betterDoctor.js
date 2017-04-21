@@ -43,5 +43,7 @@ Patient.prototype.getDoctors = function(newPatient, print) {
     //.this is current patient object
 };
 
+
+
 exports.Doctor = Doctor;
 exports.Patient = Patient;
