@@ -9,10 +9,11 @@ function Patient(firstName, lastName, insurance, illness) {
   this.doctors = [];
 }
 
-function Doctor(first, last, picture) {
+function Doctor(first, last, picture, bio) {
   this.firstName = first;
   this.lastName = last;
   this.picture = picture;
+  this.bio = bio;
 }
 
 function addDoctors() {
@@ -29,9 +30,9 @@ Patient.prototype.getDoctors = function(newPatient, print) {
    .then(function(result) {
       console.log(result);
       for(var i = 0; i < result.data.length; i++) {
-        var doctor = new Doctor(result.data[i].profile.first_name, result.data[i].profile.last_name, result.data[i].profile.image_url);
+        var doctor = new Doctor(result.data[i].profile.first_name, result.data[i].profile.last_name, result.data[i].profile.image_url, result.data[i].profile.bio);
         potentialDocs.push(doctor);
-        print(doctor.firstName, doctor.lastName, doctor.picture);
+        print(doctor.firstName, doctor.lastName, doctor.picture, doctor.bio);
       }
       newPatient.doctors = potentialDocs;
       console.log(newPatient, "inside");

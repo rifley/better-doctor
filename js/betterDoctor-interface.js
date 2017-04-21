@@ -3,11 +3,11 @@ var Patient = require('./../js/betterDoctor.js').Patient;
 
 var Patients = [];
 
-function print(firstName, lastName, picture) {
+function print(firstName, lastName, picture, bio) {
   $("#output").append(
     "<div class='doctor'>" +
     "<img src='"+picture+"' alt='test' class='img-circle'><br>" +
-    "<p>" + lastName + ', ' + firstName + "</p><br>" + "</div>");
+    "<p>" + lastName + ', ' + firstName + "</p><br>" +"<p>"+ bio+"</p>"+"<p>"+"</p><br>" + "</div>");
 }
 
 
