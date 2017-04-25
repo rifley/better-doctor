@@ -6,7 +6,7 @@ var Patients = [];
 function print(firstName, lastName, picture, bio) {
   $("#output").append(
     "<div class='doctor'>" +
-    "<img src='"+picture+"' alt='test' class='img-circle'><br>" +
+    "<img src='"+picture+"' alt='doctor-image' class='img-circle'><br>" +
     "<h6>" + lastName + ', ' + firstName +"</h6><br>" +"<p>"+ bio+"</p>" + "</div>");
 }
 
@@ -15,6 +15,7 @@ $(function(){
 
 
   $("#patient-form").submit(function(event){
+    $("#output").empty();
     event.preventDefault();
     var patientFirst = $("#patientFirstName").val();
     var patientLast = $("#patientLastName").val();
