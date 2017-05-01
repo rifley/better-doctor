@@ -21,8 +21,10 @@ $(function(){
     var patientLast = $("#patientLastName").val();
     var patientInsurance = $("#patientInsurance").val();
     var patientIllness = $("#patientIllness").val();
+    var patientLocation = $("#location").val();
 
-    var newPatient = new Patient(patientFirst, patientLast, patientInsurance, patientIllness);
+
+    var newPatient = new Patient(patientFirst, patientLast, patientInsurance, patientIllness, patientLocation);
     newPatient.getDoctors(newPatient, print);
 
     console.log(newPatient);

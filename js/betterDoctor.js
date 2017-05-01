@@ -1,11 +1,12 @@
 var apiKey = require('./../.env').apiKey;
-console.log(apiKey);
 
-function Patient(firstName, lastName, insurance, illness) {
+
+function Patient(firstName, lastName, insurance, illness, location) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.insurance = insurance;
   this.illness = illness;
+  this.location = location;
   this.doctors = [];
 }
 
@@ -26,7 +27,7 @@ var potentialDocs = [];
 
 
 Patient.prototype.getDoctors = function(newPatient, print) {
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + this.illness + '&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=' + apiKey)
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query=' + this.illness + '&location='+ this.location + '&skip=0&limit=10&user_key=' + apiKey)
    .then(function(result) {
       console.log(result);
       for(var i = 0; i < result.data.length; i++) {
